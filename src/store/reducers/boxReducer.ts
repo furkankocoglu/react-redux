@@ -18,13 +18,12 @@ const boxSlice = createSlice({
     initialState,
     reducers: {
       setBox: (state, action: BoxAction) => {
+        console.log(action.type);
         state.box = action.payload;
-        return state;
       },
       resetBox: (state) => {
         state.box = box;
-        return state;
-      },
+      }
     }
   });
   
